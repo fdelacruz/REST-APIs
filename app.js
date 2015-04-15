@@ -13,7 +13,7 @@ var port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-bookRouter = require('./routes/bookRoutes')();
+bookRouter = require('./routes/bookRoutes')(Book);
 
 app.use('/api', bookRouter);
 
